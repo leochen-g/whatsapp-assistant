@@ -1,0 +1,54 @@
+{
+  "name": "whatsapp-assistant",
+  "version": "1.0.0",
+  "description": "WhatsApp智能微秘书1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "pm2": "pm2 start pm2.json",
+    "stop": "pm2 stop ai-worker",
+    "restart": "pm2 restart ai-worker",
+    "start": "node index.js",
+    "test": "node src/index.template.js"
+  },
+  "author": "Leo_chen",
+  "license": "MIT",
+  "keywords": [
+    "wechaty2.x",
+    "wechaty",
+    "mongoose",
+    "WhatsApp机器人",
+    "WhatsApp助手",
+    "WhatsApp",
+    "WhatsApp Bot",
+    "WhatsApp Chat Bot",
+    "chatgpt",
+    "微秘书",
+    "智能机器人",
+    "对话机器人",
+    "node",
+    "js"
+  ],
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
+  },
+  "dependencies": {
+    "@juzi/wechaty": "^1.0.87",
+    "@grpc/grpc-js": "1.9.14",
+    "@juzi/wechaty-puppet": "^1.0.78",
+    "@juzi/wechaty-puppet-whatsapp": "^1.0.31",
+    "wechaty-web-panel": "^1.6.42"
+  },
+  "devDependencies": {
+    "pm2": "^4.2.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leochen-g/whatsapp-assistant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leochen-g/whatsapp-assistant/issues"
+  },
+  "homepage": "https://github.com/leochen-g/whatsapp-assistant#readme"
+}
