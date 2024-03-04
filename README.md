@@ -19,117 +19,7 @@ WhatsApp账号成为你的得力助手
 
 node 版本 >18
 
-## 项目说明
-
-本项目是基于[wechaty](https://github.com/wechaty/wechaty) 的个人开源智能机器人项目，更多关于`wechaty`项目说明及 api
-文档可以移步：[wechaty 介绍](https://wechaty.js.org/docs/howto/)
-
-## 更多功能说明
-
-- [x] 微信每日说,定时给女朋友发送每日天气提醒，以及每日一句
-
-* 定时提醒
-
-- [x] 当天定时提醒 例："提醒 我 18:00 下班了，记得带好随身物品"
-- [x] 每天定时提醒 例："提醒 我 每天 18:00 下班了，记得带好随身物品"
-- [x] 指定日期提醒 例："提醒 我 2019-05-10 8:00 还有 7 天是女朋友生日了，准备一下"
-
-* 智能机器人
-
-- [x] 天行机器人
-- [x] 图灵机器人
-- [x] 微信开放对话平台
-- [x] 火出圈的ChatGPT
-  - [x] 支持多种模型在线切换，代理在线配置
-  - [x] 自定义对话配置， 不同群，不同好友，不同的对话配置
-  - [x] prompts 市场，设定不同角色
-  - [x] 无缝对接dify和fastgpt向量知识库平台
-- [ ] 更多
-
-* 定时任务
-
-- [x] 新闻定时发送
-- [x] 消息定时发送
-- [x] 倒计时提醒
-- [x] rss订阅推送
-- [ ] 更多功能等你来 pr
-
-* 关键词
-
-- [x] 关键词加好友
-- [x] 关键词加群
-- [x] 关键词回复
-- [x] 关键词事件
-    - [x] 天气查询 例："上海天气"
-    - [x] 垃圾分类 例："?香蕉皮"
-    - [x] 名人名言 例： "名人名言"
-    - [x] 老黄历查询 例： "黄历 2019-6-13"
-    - [x] 姓氏起源 例： "姓陈"
-    - [x] 星座运势 例： "\*双子座"
-    - [x] 神回复 例： "神回复"
-    - [x] 获取表情包 例： "表情包你好坏"
-    - [x] 获取美女图 例： "美女图"
-    - [x] 群合影 例： "群合影"
-    - [x] 牛年头像 例： "牛气冲天"
-    - [ ] 更多待你发现
-- [x] 进群自动欢迎
-- [x] 加好友自动回复
-
-* 自动更新配置文件，无需重启
-
-- [x] 默认给机器人发送 ‘更新’ 触发拉取新配置文件操作，可在面板`小助手配置->关键词回复->关键词事件`进行修改关键词
-
-* 特色功能
-
-- [x] 主动发送消息
-- [x] 主动更新配置
-- [x] 主动同步好友和群列表
-- [x] 多群消息同步
-
-更多详情介绍：[传送门](https://www.xkboke.com/web-inn/secretary/client.html#%E5%B0%8F%E5%8A%A9%E6%89%8B%E5%8A%9F%E8%83%BD%E4%B8%80%E8%A7%88)
-
-## 提前准备
-
-### 注册智能微秘书管理账号
-
-1. 注册：[智能微秘书](https://wechat.aibotk.com/#/signup?r=dBL0Bn)
-
-2. 初始化配置文件`小助手配置->基础配置`，修改后保存
-
-3. 个人中心获取`APIKEY`和`APISECRET`，后续配置用到
-
-![](./doc/img/user-center.png)
-
-### 注册天行数据账号
-
-由于本项目大部分定时资讯和一些天气接口来自于天行数据，所以需要提前准备好天行数据的账号，同时申请好相关接口的权限
-
-1、注册: [天行数据](https://www.tianapi.com/source/865c0f3bfa)
-
-2、申请接口权限
-
-必选接口
-
-* [天行机器人](https://www.tianapi.com/apiview/47)
-* [天气](https://www.tianapi.com/apiview/72)
-* [新闻](https://www.tianapi.com/apiview/51)
-* [垃圾分类](https://www.tianapi.com/apiview/97)
-
-可选接口（如果想使用相应的功能还是必须申请的），但是如果默认使用了天行机器人，以下功能接口无需申请也可以，机器人会直接返回对应信息
-
-* [土味情话](https://www.tianapi.com/apiview/80)
-* [名人名言](https://www.tianapi.com/apiview/92)
-* [星座运势](https://www.tianapi.com/apiview/78)
-* [姓氏起源](https://www.tianapi.com/apiview/94)
-* [顺口溜](https://www.tianapi.com/apiview/54)
-* [老黄历](https://www.tianapi.com/apiview/45)
-* [神回复](https://www.tianapi.com/apiview/39)
-* [歇后语](https://www.tianapi.com/apiview/38)
-* [绕口令](https://www.tianapi.com/apiview/37)
-* [疫情](https://www.tianapi.com/apiview/169)
-* [网络取名](https://www.tianapi.com/apiview/36)
-
-## 开始
+## 部署运行
 
 ### 直接运行
 
@@ -163,7 +53,7 @@ node 版本 >18
 
 ```shell
 
-docker pull aibotk/worker-assistant
+docker pull aibotk/whatsapp-assistant
 
 ```
 
@@ -174,14 +64,14 @@ docker pull aibotk/worker-assistant
 1、请在项目根目录执行，这个命令是前台执行可以直接看到log日志的，但是没法关闭，只能销毁终端实例
 
 ```shell
-docker run -e AIBOTK_KEY="微秘书apikey" -e AIBOTK_SECRET="微秘书apiSecret" --name=workerbot aibotk/whatsapp-assistant
+docker run -e AIBOTK_KEY="微秘书apikey" -e AIBOTK_SECRET="微秘书apiSecret" --name=whatsappbot aibotk/whatsapp-assistant
 
 ```
 
 2、这个命令可以在后台运行，多了一个`-d`
 
 ```shell
-docker run -d -e AIBOTK_KEY="微秘书apikey" -e AIBOTK_SECRET="微秘书apiSecret" --name=workerbot aibotk/whatsapp-assistant
+docker run -d -e AIBOTK_KEY="微秘书apikey" -e AIBOTK_SECRET="微秘书apiSecret" --name=whatsappbot aibotk/whatsapp-assistant
 
 ```
 
@@ -194,6 +84,3 @@ docker run -d -e AIBOTK_KEY="微秘书apikey" -e AIBOTK_SECRET="微秘书apiSecr
 请遵守国家法律政策，请勿用于非法犯罪行为！
 
 请合理使用，一切不良行为和后果均与作者无关！
-
-[gitpod_img]: https://img.shields.io/badge/Gitpod-Ready--to--Code-blue?logo=gitpod
-[gitpod_link]: https://gitpod.io/#https://github.com/leochen-g/worker-assistant
