@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-assistant",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "WhatsApp智能微秘书",
   "main": "index.js",
   "type": "module",
