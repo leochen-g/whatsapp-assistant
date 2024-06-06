@@ -18,6 +18,7 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 # Install Node.js
 RUN apt-get update && apt-get install -y nodejs
 
+SHELL ["/bin/bash", "-c"]
 # Install additional dependencies required for the application
 RUN apt-get install -y \
     gconf-service \
