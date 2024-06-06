@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:22.04
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -18,9 +18,9 @@ RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesourc
 # Install Node.js
 RUN apt-get update && apt-get install -y nodejs
 
-SHELL ["/bin/bash", "-c"]
 # Install additional dependencies required for the application
-RUN apt-get install -y \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     gconf-service \
     libgbm-dev \
     libasound2 \
@@ -59,7 +59,9 @@ RUN apt-get install -y \
     libnss3 \
     lsb-release \
     xdg-utils \
-    wget
+    wget && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
