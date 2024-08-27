@@ -34,9 +34,9 @@
     "npm": ">=7"
   },
   "dependencies": {
-    "@juzi/wechaty": "^1.0.99",
+    "@juzi/wechaty": "^1.0.100",
     "@grpc/grpc-js": "1.9.14",
-    "@juzi/wechaty-puppet": "^1.0.90",
+    "@juzi/wechaty-puppet": "^1.0.91",
     "@juzi/wechaty-puppet-whatsapp": "^1.0.33",
     "wechaty-web-panel": "^1.6.61"
   },
