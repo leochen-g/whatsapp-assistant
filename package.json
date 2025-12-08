@@ -1,6 +1,6 @@
 {
   "name": "whatsapp-assistant",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "WhatsApp智能微秘书",
   "main": "index.js",
   "type": "module",
@@ -34,11 +34,11 @@
     "npm": ">=7"
   },
   "dependencies": {
-    "@juzi/wechaty": "^1.0.108",
-    "@juzi/wechaty-puppet": "^1.0.100",
+    "@juzi/wechaty": "^1.0.133",
+    "@juzi/wechaty-puppet": "^1.0.127",
     "@grpc/grpc-js": "1.9.14",
-    "@juzi/wechaty-puppet-whatsapp": "^1.0.35",
-    "wechaty-web-panel": "^1.6.74"
+    "@juzi/wechaty-puppet-whatsapp": "^1.0.68",
+    "wechaty-web-panel": "^1.6.109"
   },
   "devDependencies": {
     "pm2": "^4.2.3"
