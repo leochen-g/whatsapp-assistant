@@ -34,11 +34,11 @@
     "npm": ">=7"
   },
   "dependencies": {
-    "@juzi/wechaty": "^1.0.133",
-    "@juzi/wechaty-puppet": "^1.0.127",
+   "@juzi/wechaty": "^1.0.137",
+    "@juzi/wechaty-puppet": "^1.0.130",
     "@grpc/grpc-js": "1.9.14",
-    "@juzi/wechaty-puppet-whatsapp": "^1.0.68",
-    "wechaty-web-panel": "^1.6.109"
+    "@juzi/wechaty-puppet-whatsapp": "^1.0.70",
+    "wechaty-web-panel": "^1.6.113"
   },
   "devDependencies": {
     "pm2": "^4.2.3"
